@@ -1,0 +1,37 @@
+# AWS AgentCore and Strands (install first - they have strict requirements)
+bedrock-agentcore>=0.1.2
+strands-agents
+aws-opentelemetry-distro
+mcp
+
+# Core Dependencies (compatible versions)
+fastapi
+uvicorn
+pydantic
+python-dotenv
+
+# AWS Dependencies (let bedrock-agentcore control versions)
+boto3
+botocore
+
+# Data Processing
+pandas
+numpy
+requests
+aiohttp
+
+# Visualization
+plotly
+matplotlib
+
+# Development
+pytest
+black
+flake8
+
+# Climate/Energy APIs
+pytz
+schedule
+
+# Streamlit (optional - only for local dev)
+streamlit

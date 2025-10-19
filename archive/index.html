@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Climate Solutions AI</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .metric {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .label {
+            opacity: 0.8;
+            font-size: 0.9em;
+        }
+        .status {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        .chat {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        .messages {
+            flex: 1;
+            overflow-y: auto;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .message {
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .input-group {
+            display: flex;
+            gap: 10px;
+        }
+        input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+        input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+        .loading {
+            opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌍 Climate Solutions AI</h1>
+            <p>Autonomous AI Agent for Building Energy Optimization & AWS Cost Reduction</p>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="label">Energy Consumption</div>
+                <div class="metric" id="consumption">2,112 kWh</div>
+                <div class="label">12% reduction achieved</div>
+            </div>
+            
+            <div class="card">
+                <div class="label">Daily Savings</div>
+                <div class="metric" id="savings">$100.80</div>
+                <div class="label">Building optimization</div>
+            </div>
+            
+            <div class="card">
+                <div class="label">CO₂ Prevented</div>
+                <div class="metric" id="carbon">216 kg</div>
+                <div class="label">≈ 540km car emissions</div>
+            </div>
+            
+            <div class="card">
+                <div class="label">AWS Spot Price</div>
+                <div class="metric" id="spot">$0.048/hr</div>
+                <div class="label">m5.large ap-southeast-2</div>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <div class="card">
+                <div class="label">🏢 System Status</div>
+                <div class="status">
+                    <span class="badge">HVAC: Optimal</span>
+                    <span class="badge">Lighting: Energy Saving</span>
+                    <span class="badge">Servers: High Load</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="label">⚡ Energy Market</div>
+                <div class="metric" id="renewables">65%</div>
+                <div class="label">Renewable energy</div>
+            </div>
+            
+            <div class="card">
+                <div class="label">🌤️ Weather</div>
+                <div class="metric" id="temperature">21.7°C</div>
+                <div class="label">Sydney conditions</div>
+            </div>
+        </div>
+
+        <div class="chat">
+            <h3>🤖 Climate Agent Chat</h3>
+            <div class="messages" id="messages">
+                <div class="message">
+                    <strong>Agent:</strong> Hello! I'm your Climate Solutions AI Agent. I can optimize building energy, analyze AWS spot pricing, and provide weather insights. Try asking "What's our current status?" or "Optimize spot instances for ML training"
+                </div>
+            </div>
+            <div class="input-group">
+                <input type="text" id="messageInput" placeholder="Ask about energy optimization, AWS costs, weather...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Update metrics every 30 seconds
+        setInterval(updateMetrics, 30000);
+        
+        function updateMetrics() {
+            // Simulate real-time updates
+            const consumption = document.getElementById('consumption');
+            const current = parseInt(consumption.textContent);
+            const variation = Math.floor(Math.random() * 20) - 10;
+            consumption.textContent = `${current + variation} kWh`;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const messages = document.getElementById('messages');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message';
+            userMsg.innerHTML = `<strong>You:</strong> ${message}`;
+            messages.appendChild(userMsg);
+            
+            // Clear input
+            input.value = '';
+            
+            // Add loading message
+            const loadingMsg = document.createElement('div');
+            loadingMsg.className = 'message loading';
+            loadingMsg.innerHTML = `<strong>Agent:</strong> Processing your request...`;
+            messages.appendChild(loadingMsg);
+            
+            // Scroll to bottom
+            messages.scrollTop = messages.scrollHeight;
+            
+            // Simulate agent response
+            setTimeout(() => {
+                loadingMsg.classList.remove('loading');
+                
+                let response = "I understand your request. ";
+                
+                if (message.toLowerCase().includes('status')) {
+                    response += "Current status: Building optimized with 12% energy reduction, AWS spot instances running at $0.048/hr, 65% renewable energy available.";
+                } else if (message.toLowerCase().includes('spot') || message.toLowerCase().includes('aws')) {
+                    response += "AWS optimization: Best spot instance window is 08:00-09:00 with 80% renewable energy at $0.056/hr. ML training recommended during this period for maximum cost and carbon savings.";
+                } else if (message.toLowerCase().includes('weather')) {
+                    response += "Weather conditions: 21.7°C in Sydney with 450W/m² solar irradiance. Medium solar potential - good for moderate energy optimization.";
+                } else if (message.toLowerCase().includes('optimize')) {
+                    response += "Running optimization... Building energy reduced by 12%, AWS costs optimized with spot instances, scheduling workloads during high renewable periods.";
+                } else {
+                    response += "I can help with building energy optimization, AWS cost reduction, weather analysis, and climate impact calculations. What would you like to know?";
+                }
+                
+                loadingMsg.innerHTML = `<strong>Agent:</strong> ${response}`;
+                messages.scrollTop = messages.scrollHeight;
+            }, 1500);
+        }
+        
+        // Allow Enter key to send message
+        document.getElementById('messageInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+        
+        console.log('🌍 Climate Solutions AI - Frontend Ready');
+        console.log('Backend API: http://localhost:8000');
+        console.log('API Docs: http://localhost:8000/docs');
+    </script>
+</body>
+</html>
