@@ -400,15 +400,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 👥 Team
-
-**Dan Ashley** - Project Lead  
-- Email: dan.ashley@example.com
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-
----
-
 ## 🙏 Acknowledgments
 
 - **AWS** for providing the Bedrock platform and AgentCore framework
