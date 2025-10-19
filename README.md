@@ -8,7 +8,6 @@ An autonomous AI agent that optimizes building energy consumption and AWS infras
 [![AgentCore](https://img.shields.io/badge/AgentCore-Runtime-blue)](https://aws.amazon.com/bedrock/)
 [![React](https://img.shields.io/badge/React-18-blue)](https://react.dev)
 
-![GAIA Dashboard](docs/dashboard-screenshot.png)
 
 ---
 
