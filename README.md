@@ -405,7 +405,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **AWS** for providing the Bedrock platform and AgentCore framework
 - **Australian Energy Market Operator (AEMO)** for energy market data
 - **Bureau of Meteorology** for weather data
-- **Iress** for the inspiring use case and building specifications
 
 ---
 
