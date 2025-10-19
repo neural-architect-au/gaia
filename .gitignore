@@ -64,6 +64,9 @@ CHAT_SUMMARY.md
 # Archive folder
 archive/
 
+# Amazon Q
+.amazonq/
+
 # AWS
 .aws/
 *.pem
