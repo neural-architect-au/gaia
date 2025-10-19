@@ -1,4 +1,4 @@
-# 🌱 ClimateCore - Autonomous AI Agent for Sustainable Infrastructure
+# 🌱 GAIA - Autonomous AI Agent for Sustainable Infrastructure
 
 **AWS AI Agent Global Hackathon 2025**
 
@@ -8,7 +8,7 @@ An autonomous AI agent that optimizes building energy consumption and AWS infras
 [![AgentCore](https://img.shields.io/badge/AgentCore-Runtime-blue)](https://aws.amazon.com/bedrock/)
 [![React](https://img.shields.io/badge/React-18-blue)](https://react.dev)
 
-![ClimateCore Dashboard](docs/dashboard-screenshot.png)
+![GAIA Dashboard](docs/dashboard-screenshot.png)
 
 ---
 
@@ -20,13 +20,13 @@ Buildings consume **40% of global energy** and contribute **30% of global CO₂ 
 - Make autonomous decisions without human intervention
 - Adapt to changing weather and energy market conditions
 
-**ClimateCore solves this with an autonomous AI agent that makes intelligent, real-time decisions.**
+**GAIA solves this with an autonomous AI agent that makes intelligent, real-time decisions.**
 
 ---
 
 ## 💡 The Solution
 
-ClimateCore is an **autonomous AI agent** powered by AWS Bedrock that:
+GAIA is an **autonomous AI agent** powered by AWS Bedrock that:
 
 ✅ **Monitors** real-time weather, energy markets, and building systems  
 ✅ **Reasons** using Claude 4.5 Sonnet to make optimal decisions  
