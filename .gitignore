@@ -61,6 +61,9 @@ build/
 chat
 CHAT_SUMMARY.md
 
+# Archive folder
+archive/
+
 # AWS
 .aws/
 *.pem
