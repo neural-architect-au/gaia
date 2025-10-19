@@ -67,6 +67,9 @@ archive/
 # Amazon Q
 .amazonq/
 
+# AWS Config
+.bedrock_agentcore.yaml
+
 # AWS
 .aws/
 *.pem
