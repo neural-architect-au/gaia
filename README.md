@@ -325,7 +325,6 @@ curl -X POST http://localhost:8080/invocations \
 - ✅ Public code repository with full source
 - ✅ Architecture diagram (see above)
 - ✅ Deployment instructions
-- ✅ Demo video (see `/docs/demo-video.mp4`)
 - ✅ Live deployed project
 
 ---
